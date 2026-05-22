@@ -103,7 +103,7 @@
 
 ## 🖼️ 预览
 
-![预览](docs/images/show.webp)
+![预览](docs/images/show.png)
 
 ---
 
