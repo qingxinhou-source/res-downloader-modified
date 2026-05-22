@@ -1,0 +1,20 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "res-downloader-modified",
+  "outputfilename": "res-downloader-modified",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "houqingxin",
+    "email": "houqingxincampus@hotmail.com"
+  },
+  "info": {
+    "companyName": "houqingxin",
+    "productName": "Res Downloader Modified",
+    "productVersion": "3.1.3",
+    "copyright": "Copyright (c) 2026 houqingxin <houqingxincampus@hotmail.com>",
+    "comments": "A modified distribution by houqingxin based on res-downloader. See LICENSE and NOTICE for open source license and attribution information."
+  }
+}

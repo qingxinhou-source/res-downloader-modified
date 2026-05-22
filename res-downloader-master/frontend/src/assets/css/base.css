@@ -1,0 +1,101 @@
+:root {
+  --md-primary: #f15f86;
+  --md-primary-hover: #df4772;
+  --md-on-primary: #ffffff;
+  --md-secondary: #00a8a0;
+  --md-error: #d92d50;
+  --md-warning: #d88918;
+  --md-background: #fff7ec;
+  --md-surface: #fffef9;
+  --md-surface-container: #fff0df;
+  --md-surface-container-high: #ffe3c6;
+  --md-outline: #e9bba6;
+  --md-text: #3f261d;
+  --md-text-muted: #8a695d;
+  --md-shadow-1: 0 12px 28px rgba(191, 85, 91, 0.12), 0 2px 6px rgba(80, 45, 28, 0.08);
+  --md-shadow-2: 0 24px 58px rgba(191, 85, 91, 0.18), 0 8px 18px rgba(80, 45, 28, 0.10);
+  --md-theme-glow: rgba(247, 190, 64, 0.34);
+  --md-accent: #00a8a0;
+  --molly: #ffd9c7;
+  --molly-hair: #f7be40;
+  --molly-eye: #009f98;
+  --molly-mouth: #c53b58;
+  --md-radius-sm: 8px;
+  --md-radius-md: 12px;
+  --md-radius-lg: 16px;
+  --md-radius-xl: 24px;
+}
+
+:root {
+  --color-background: var(--md-background);
+  --color-background-soft: var(--md-surface-container);
+  --color-background-mute: var(--md-surface-container-high);
+
+  --color-border: var(--md-outline);
+  --color-border-hover: var(--md-primary);
+
+  --color-heading: var(--md-text);
+  --color-text: var(--md-text);
+
+  --section-gap: 160px;
+}
+
+.dark {
+  --md-primary: #a8c7fa;
+  --md-primary-hover: #d3e3fd;
+  --md-on-primary: #062e6f;
+  --md-secondary: #81c995;
+  --md-error: #f28b82;
+  --md-warning: #fdd663;
+  --md-background: #131314;
+  --md-surface: #1f1f1f;
+  --md-surface-container: #2d2f31;
+  --md-surface-container-high: #383a3d;
+  --md-outline: #3c4043;
+  --md-text: #e3e3e3;
+  --md-text-muted: #c4c7c5;
+  --md-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35), 0 1px 3px 1px rgba(0, 0, 0, 0.22);
+  --md-shadow-2: 0 2px 10px rgba(0, 0, 0, 0.36), 0 8px 24px rgba(0, 0, 0, 0.24);
+  --color-background: var(--md-background);
+  --color-background-soft: var(--md-surface-container);
+  --color-background-mute: var(--md-surface-container-high);
+  --color-border: var(--md-outline);
+  --color-border-hover: var(--md-primary);
+  --color-heading: var(--md-text);
+  --color-text: var(--md-text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    'Microsoft YaHei UI',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
