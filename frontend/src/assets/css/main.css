@@ -1,0 +1,316 @@
+@import 'base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--molly-hair) 22%, transparent) 0 96px, transparent 98px),
+    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--md-accent) 16%, transparent) 0 124px, transparent 126px),
+    linear-gradient(135deg, color-mix(in srgb, var(--md-background) 94%, white 6%), var(--md-background));
+  position: relative;
+  overflow: hidden;
+}
+
+#app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, var(--md-outline) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--md-outline) 12%, transparent) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: linear-gradient(135deg, rgba(0, 0, 0, 0.48), transparent 68%);
+  opacity: 0.72;
+}
+
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.material-surface {
+  background: var(--md-surface);
+  border: 1px solid var(--md-outline);
+  box-shadow: var(--md-shadow-1);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 180ms ease;
+}
+
+.material-surface:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--md-primary) 28%, var(--md-outline));
+  box-shadow: var(--md-shadow-2);
+}
+
+.material-surface-strong {
+  background: var(--md-surface);
+  border: 1px solid color-mix(in srgb, var(--md-outline) 85%, var(--md-primary) 15%);
+  box-shadow: var(--md-shadow-2);
+}
+
+.material-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background: var(--md-surface-container);
+  border: 1px solid var(--md-outline);
+  color: var(--md-text-muted);
+  line-height: 1;
+  transition: transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+
+.material-chip:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--md-primary) 34%, var(--md-outline));
+  background: color-mix(in srgb, var(--md-surface-container) 78%, var(--md-primary) 8%);
+}
+
+.material-chip-strong {
+  background: color-mix(in srgb, var(--md-primary) 12%, var(--md-surface));
+  border-color: color-mix(in srgb, var(--md-primary) 25%, var(--md-outline));
+  color: var(--md-primary);
+}
+
+.material-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-shell {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--md-surface) 90%, var(--molly) 10%), var(--md-surface));
+  border: 1px solid color-mix(in srgb, var(--md-outline) 76%, var(--md-primary) 18%);
+  box-shadow: var(--md-shadow-2);
+  border-radius: 10px;
+}
+
+.workspace-page {
+  height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--md-accent) 16%, transparent) 0 118px, transparent 120px),
+    linear-gradient(180deg, color-mix(in srgb, var(--md-surface-container) 72%, transparent), transparent 38%),
+    repeating-linear-gradient(90deg, transparent 0 34px, color-mix(in srgb, var(--md-outline) 18%, transparent) 34px 35px),
+    var(--md-surface);
+}
+
+.metric-card {
+  position: relative;
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 88px;
+  background:
+    radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--md-accent) 18%, transparent) 0 24px, transparent 26px),
+    linear-gradient(145deg, var(--md-surface), color-mix(in srgb, var(--md-surface-container) 74%, var(--molly) 10%));
+  border: 1px solid color-mix(in srgb, var(--md-outline) 74%, var(--md-primary) 20%);
+  box-shadow: var(--md-shadow-1);
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 200ms ease;
+}
+
+.metric-card::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  top: -80%;
+  height: 70%;
+  background: linear-gradient(110deg, transparent, color-mix(in srgb, white 26%, transparent), transparent);
+  transform: translateX(-60%) rotate(8deg);
+  transition: transform 520ms ease;
+  pointer-events: none;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--md-primary) 42%, var(--md-outline));
+  box-shadow: var(--md-shadow-2);
+}
+
+.metric-card:hover::after {
+  transform: translateX(62%) rotate(8deg);
+}
+
+.metric-label {
+  color: var(--md-text-muted);
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.metric-value {
+  color: var(--md-text);
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.soft-panel {
+  position: relative;
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--md-surface) 90%, var(--molly) 10%), var(--md-surface));
+  border: 1px solid color-mix(in srgb, var(--md-outline) 80%, var(--md-primary) 16%);
+  box-shadow: var(--md-shadow-1);
+  transition: border-color 180ms ease, box-shadow 200ms ease, background-color 180ms ease;
+}
+
+.soft-panel:hover {
+  border-color: color-mix(in srgb, var(--md-primary) 26%, var(--md-outline));
+  box-shadow:
+    var(--md-shadow-1),
+    inset 0 0 0 1px color-mix(in srgb, var(--md-primary) 10%, transparent);
+}
+
+.theme-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--md-primary);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--molly) 50%, transparent),
+    0 0 0 7px color-mix(in srgb, var(--md-accent) 22%, transparent);
+}
+
+.material-toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.material-toolbar-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.material-icon-button {
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 160ms cubic-bezier(0.2, 0, 0, 1),
+    box-shadow 160ms cubic-bezier(0.2, 0, 0, 1),
+    transform 160ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.material-icon-button:hover {
+  box-shadow: var(--md-shadow-1);
+  transform: translateY(-1px);
+}
+
+.material-icon-button:active,
+.n-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.n-button,
+.n-base-selection,
+.n-input,
+.n-input-number {
+  letter-spacing: 0;
+}
+
+.n-button {
+  font-weight: 500;
+  text-transform: none;
+  transition:
+    transform 150ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.n-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--md-primary) 12%, transparent);
+}
+
+.n-base-selection,
+.n-input,
+.n-input-number {
+  transition:
+    transform 150ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+}
+
+.n-base-selection:hover,
+.n-input:hover,
+.n-input-number:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px color-mix(in srgb, var(--md-primary) 9%, transparent);
+}
+
+.n-data-table {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--md-outline) 86%, var(--molly-mouth) 14%);
+}
+
+.n-data-table .n-data-table-th {
+  font-weight: 500;
+}
+
+.n-data-table .n-data-table-td {
+  transition: background-color 120ms cubic-bezier(0.2, 0, 0, 1), color 120ms ease;
+}
+
+.n-data-table .n-data-table-tr:hover .n-data-table-td {
+  background-color: color-mix(in srgb, var(--md-primary) 8%, var(--md-surface)) !important;
+}
+
+.n-modal .n-card,
+.n-popover,
+.n-dialog {
+  box-shadow: var(--md-shadow-2);
+}
+
+.n-menu .n-menu-item-content {
+  margin: 2px 8px;
+  transition: transform 150ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.n-menu .n-menu-item-content:hover {
+  transform: translateX(2px);
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--md-primary) 68%, transparent);
+}
+
+.n-tabs-nav--top {
+  background: transparent;
+}
+
+.visual-feedback-off *,
+.visual-feedback-off *::before,
+.visual-feedback-off *::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+.visual-feedback-off .n-button:hover,
+.visual-feedback-off .n-base-selection:hover,
+.visual-feedback-off .n-input:hover,
+.visual-feedback-off .n-input-number:hover,
+.visual-feedback-off .metric-card:hover,
+.visual-feedback-off .soft-panel:hover,
+.visual-feedback-off .material-chip:hover,
+.visual-feedback-off .material-icon-button:hover {
+  transform: none !important;
+  box-shadow: inherit;
+}

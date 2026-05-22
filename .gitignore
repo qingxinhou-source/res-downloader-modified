@@ -1,0 +1,17 @@
+.idea
+build/bin
+node_modules
+frontend/dist
+.DS_Store
+desktop.ini
+.workbuddy/
+*.log
+*_out.txt
+frontend/vite-dev.*.log
+_bg_out.txt
+_test_out.txt
+_force_del*.py
+_list_models.py
+_remove_bg*.py
+_run_bg.ps1
+_test_rembg.py
