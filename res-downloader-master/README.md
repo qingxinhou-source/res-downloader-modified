@@ -7,7 +7,7 @@
 <h4>📖 中文 | <a href="./README-EN.md">English</a></h4>
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
-![Version](https://img.shields.io/badge/version-3.1.3-blue)
+![Version](https://img.shields.io/badge/version-1.5.23-blue)
 
 </div>
 
